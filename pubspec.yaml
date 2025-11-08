@@ -1,0 +1,31 @@
+name: vaxp_launcher
+description: "VAXP Application Launcher"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.9
+  vaxp_core:
+    path: ../vaxp_core
+  file_picker:
+  cupertino_icons: ^1.0.8
+  window_manager: ^0.3.8
+  shared_preferences: ^2.2.2
+  dbus: ^0.7.11
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+  glassmorphism: ^3.0.0
+  process_run: ^1.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

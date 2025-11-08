@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=vaxp_launcher
+Comment=Flutter Application - vaxp_launcher
+Exec=/usr/bin/vaxp-launcher
+Icon=/usr/share/icons/hicolor/256x256/apps/vaxp-launcher.png
+Terminal=false
+Categories=Utility;Development;

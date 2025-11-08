@@ -1,0 +1,21 @@
+#!/bin/bash
+# المسار الأساسي للتطبيق مع الاقتباسات لضمان عمله مع المسافات
+APP_DIR="/usr/share/vaxp-launcher"
+
+# إعداد بيئة العمل لمكتبات فلاتر
+export LD_LIBRARY_PATH="$APP_DIR/lib:$LD_LIBRARY_PATH"
+
+# الانتقال إلى مجلد التطبيق
+cd "$APP_DIR"
+
+# التأكد من وجود الملف التنفيذي
+if [ ! -f "./vaxp_launcher" ]; then
+    echo "Error: Flutter executable not found: vaxp_launcher"
+    exit 1
+fi
+
+# التأكد من أن الملف لديه أذونات التشغيل
+chmod +x "./vaxp_launcher"
+
+# تشغيل التطبيق مع تمرير كل المدخلات
+exec "./vaxp_launcher" "$@"
